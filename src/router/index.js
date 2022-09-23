@@ -14,6 +14,14 @@ const routes = [
     // redirect: "/home",
     component: () => import("@/views/HomePage.vue"),
   },
+  {
+    path: "/coupon",
+    name: "coupon",
+    meta: {
+    },
+    // redirect: "/home",
+    component: () => import("@/views/coupon.vue"),
+  },
   // {
   //   path: "/:pathMatch(.*)*",
   //   name: "NotFound",
