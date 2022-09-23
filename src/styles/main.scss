@@ -1,0 +1,195 @@
+html,
+body {
+  @apply p-0 m-0;
+  // font-family: Microsoft JhengHei, Helvetica;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu,
+    "Helvetica Neue", "Helvetica", Microsoft JhengHei, "Arial", sans-serif,
+    system-ui;
+}
+
+//custom-modal
+$modalBlue: #1f3fb3;
+.custom-modal.p-dialog {
+  @apply rounded-2xl overflow-hidden;
+  border: 3px solid $modalBlue;
+
+  .p-dialog-header {
+    background-color: $modalBlue;
+    @apply py-1 text-white text-left;
+
+    .p-dialog-header-icons {
+      // background: #e6e1e1;
+      // border-radius: 50%;
+      .p-dialog-header-icon {
+        color: aliceblue !important;
+
+        &:hover {
+          color: #4162d5 !important;
+          // rgb(24, 123, 209)
+        }
+      }
+    }
+  }
+
+  .p-dialog-content {
+    @apply p-3;
+    min-height: 120px;
+  }
+
+  .p-dialog-footer {
+    border-top: 1px solid #ccc;
+    @apply p-2;
+  }
+}
+
+//heading-line
+.heading-line {
+  text-align: center;
+  position: relative;
+  margin: 15px 0;
+  font-weight: 500;
+  text-transform: uppercase;
+  // font-size: 18px;
+  font-size: 22px;
+}
+
+.heading-line span {
+  background: #fff;
+  padding: 5px 25px;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+  margin: 0 10px;
+  color: #051945;
+}
+
+.heading-line:before {
+  content: "";
+  background: #d1d1d1;
+  height: 1px;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  z-index: 1;
+}
+
+// Typing effect for text
+.typing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.typing-effect {
+  width: 44ch;
+  animation: typing 2s steps(22), effect 0.55s step-end infinite alternate;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 3px solid;
+  font-family: monospace;
+  font-size: 2em;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes effect {
+  50% {
+    border-color: transparent;
+  }
+}
+
+//theme color
+.theme-color1 {
+  color: #e7e9f0 !important;
+}
+.theme-color2 {
+  color: #051747 !important;
+}
+.theme-color3 {
+  color: #535f80 !important;
+}
+.theme-color-main {
+  color: #081f62 !important;
+}
+.theme-color5 {
+  color: #46a3e4 !important;
+}
+
+.theme-color6 {
+  color: #051945 !important;
+}
+
+.theme-color7 {
+  color: #071642 !important;
+}
+.theme-color8 {
+  color: #f1b82b !important;
+}
+.theme-color9 {
+  color: #454f68 !important;
+}
+.theme-color10 {
+  color: #38bdf8 !important;
+}
+
+.theme-color11 {
+  color: #6d7da0 !important;
+}
+
+.theme-bg-color1 {
+  background-color: #e7e9f0 !important;
+}
+.theme-bg-color2 {
+  background-color: #051747 !important;
+}
+.theme-bg-color3 {
+  background-color: #535f80 !important;
+}
+.theme-bg-color4 {
+  background-color: #081f62 !important;
+}
+.theme-bg-color5 {
+  background-color: #46a3e4 !important;
+}
+
+.bg-setting {
+  background: url("https://images.unsplash.com/photo-1612817159949-195b6eb9e31a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80")
+    no-repeat;
+  background-position: 50% 65%;
+  background-size: cover;
+}
+
+
+
+.theme-bg {
+  background: #03112e url("/public/assets/bgSwirl.svg") repeat 0 0/52px;
+}
+
+// Hover underline animation
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+  color: #fff;
+}
+.hover-underline-animation::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #fff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+.hover-underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
